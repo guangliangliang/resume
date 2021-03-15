@@ -1,0 +1,16 @@
+.home {
+  width: 100%;
+  height: 880px;
+  .main {
+    height: 100%;
+    width: 100%;
+    :global {
+      .ant-timeline {
+        height: 100%;
+      }
+      .ant-timeline-item {
+        height: calc(100% / 3);
+      }
+    }
+  }
+}

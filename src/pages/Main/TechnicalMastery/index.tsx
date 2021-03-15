@@ -3,8 +3,8 @@ import { Button } from 'antd';
 
 export default function IndexPage() {
   return (
-    <div id="jobIntention" className={styles.home}>
-      <h1 className={styles.hello}>求职意向</h1>
+    <div id="technicalMastery" className={styles.home}>
+      <h1 className={styles.hello}>技术掌握</h1>
     </div>
   );
 }
