@@ -1,5 +1,6 @@
 import styles from './index.less';
 import { Button } from 'antd';
+import { history } from 'umi';
 
 export default function IndexPage() {
   return (
@@ -9,6 +10,13 @@ export default function IndexPage() {
       <h1 className={styles.button}>
         <Button>关于我</Button>
         <Button>作品集</Button>
+        <Button
+          onClick={() => {
+            history.push('pdf');
+          }}
+        >
+          PDF
+        </Button>
       </h1>
     </div>
   );
