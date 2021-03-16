@@ -6,8 +6,11 @@
     "postinstall": "umi generate tmp",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
-    "test:coverage": "umi-test --coverage"
+    "test:coverage": "umi-test --coverage",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d dist"
   },
+  "homepage": "http://guangliangliang.gitee.io/resume",
   "gitHooks": {
     "pre-commit": "lint-staged"
   },

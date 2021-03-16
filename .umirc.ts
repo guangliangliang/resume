@@ -1,6 +1,9 @@
 import { defineConfig } from 'umi';
+const prev = process.env.NODE_ENV === 'production' ? '/resume/' : '/';
 
 export default defineConfig({
+  publicPath: prev,
+  base: prev,
   nodeModulesTransform: {
     type: 'none',
   },
@@ -10,6 +13,6 @@ export default defineConfig({
   ],
   fastRefresh: {},
   targets: {
-    ie: 11,
+    ie: 9,
   },
 });

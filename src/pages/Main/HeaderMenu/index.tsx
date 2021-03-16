@@ -16,7 +16,9 @@ const Index: React.FC<Props> = (props) => {
       className={classNames(styles.header_menu, ifFixed && styles.fixed)}
     >
       <div className={styles.header_menu_left}>
-        <a href="http://guangliangliang.gitee.io/">光亮亮-博客</a>
+        <a href="http://guangliangliang.gitee.io/" target="_blank">
+          光亮亮-博客
+        </a>
       </div>
       <div className={styles.header_menu_right}>
         {menuData.map((item: { label: any }) => {

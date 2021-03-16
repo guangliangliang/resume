@@ -25,7 +25,8 @@ export default function IndexPage() {
       (event.srcElement && event.srcElement.documentElement.scrollHeight) ||
       document.body.scrollHeight;
     // 距离页面底部的高度
-    setIfFixed(scrollTop > 960);
+    setIfFixed(scrollTop >= 953);
+    console.log(scrollTop);
     const height = scrollHeight - scrollTop - clientHeight;
   };
 

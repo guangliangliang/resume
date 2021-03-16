@@ -23,7 +23,8 @@ const clickLabel = (label: string) => {
     menuData.filter((item: { label: string }) => item.label === label)[0] || {};
   const dom = document.getElementById(id);
   if (dom) {
-    const setValue = label === '关于我' ? dom.offsetTop : dom.offsetTop - 100;
+    const setValue = label === '关于我' ? 953 : dom.offsetTop - 100;
+    console.log(setValue);
     ScrollTop(setValue, 200);
   }
 };
