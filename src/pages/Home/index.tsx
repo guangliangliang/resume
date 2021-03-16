@@ -1,6 +1,7 @@
 import styles from './index.less';
 import { Button } from 'antd';
 import { history } from 'umi';
+import { clickLabel } from '@/utils/document';
 
 export default function IndexPage() {
   return (
@@ -8,8 +9,20 @@ export default function IndexPage() {
       <h1 className={styles.hello}>Hello , My name is GLL</h1>
       <h1 className={styles.profession}>一名前端工程师</h1>
       <h1 className={styles.button}>
-        <Button>关于我</Button>
-        <Button>作品集</Button>
+        <Button
+          onClick={() => {
+            clickLabel('关于我');
+          }}
+        >
+          关于我
+        </Button>
+        <Button
+          onClick={() => {
+            clickLabel('作品集');
+          }}
+        >
+          作品集
+        </Button>
         <Button
           onClick={() => {
             history.push('pdf');

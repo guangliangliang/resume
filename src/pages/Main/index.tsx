@@ -1,15 +1,12 @@
 import styles from './index.less';
 import HeaderMenu from './HeaderMenu';
-import JobIntention from './JobIntention';
-import TechnicalMastery from './TechnicalMastery';
 import SampleReels from './SampleReels';
 import MyStory from './MyStory';
 import PlacedTop from './PlacedTop';
 import ContactMe from './ContactMe';
 import About from './About';
 import React, { useState, useEffect, useRef } from 'react';
-import { menuData } from './HeaderMenu/config';
-import { ScrollTop } from '@/utils/document';
+import { clickLabel } from '@/utils/document';
 export default function IndexPage() {
   const [ifFixed, setIfFixed] = useState(false);
 
@@ -32,17 +29,6 @@ export default function IndexPage() {
     const height = scrollHeight - scrollTop - clientHeight;
   };
 
-  const clickLabel = (label: string) => {
-    const { id } =
-      menuData.filter((item: { label: string }) => item.label === label)[0] ||
-      {};
-    const dom = document.getElementById(id);
-    if (dom) {
-      const setValue = label === '关于我' ? dom.offsetTop : dom.offsetTop - 100;
-      ScrollTop(setValue, 200);
-    }
-  };
-
   useEffect(() => {
     window.addEventListener('scroll', bindScroll);
     return () => {
@@ -55,8 +41,6 @@ export default function IndexPage() {
       <HeaderMenu clickLabel={clickLabel} ifFixed={ifFixed} />
       <PlacedTop show={ifFixed} />
       <About />
-      <JobIntention />
-      <TechnicalMastery />
       <SampleReels />
       <MyStory />
       <ContactMe />

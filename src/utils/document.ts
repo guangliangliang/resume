@@ -1,3 +1,4 @@
+import { menuData } from '@/pages/Main/HeaderMenu/config';
 const ScrollTop = (number = 0, time: number) => {
   if (!time) {
     document.body.scrollTop = document.documentElement.scrollTop = number;
@@ -17,4 +18,14 @@ const ScrollTop = (number = 0, time: number) => {
   }, spacingTime);
 };
 
-export { ScrollTop };
+const clickLabel = (label: string) => {
+  const { id } =
+    menuData.filter((item: { label: string }) => item.label === label)[0] || {};
+  const dom = document.getElementById(id);
+  if (dom) {
+    const setValue = label === '关于我' ? dom.offsetTop : dom.offsetTop - 100;
+    ScrollTop(setValue, 200);
+  }
+};
+
+export { ScrollTop, clickLabel };

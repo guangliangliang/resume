@@ -1,5 +1,5 @@
 import styles from './index.less';
-import { menuData } from './config.js';
+import { menuData } from '@/pages/Main/HeaderMenu/config';
 import React, { useState } from 'react';
 import classNames from 'classnames';
 
