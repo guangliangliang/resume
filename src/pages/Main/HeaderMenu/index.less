@@ -25,6 +25,25 @@
     position: relative;
     right: 3%;
   }
+  .menu_right_web,
+  .menu_right_phone {
+    width: 100%;
+    height: 100%;
+  }
+  .right_phone_ul {
+    position: relative;
+    width: 100%;
+    top: -70px;
+    height: 150px;
+    background: gray;
+    ul {
+      height: 100%;
+    }
+    li {
+      height: 25%;
+      list-style: none;
+    }
+  }
   .right_label {
     margin-left: 20px;
     cursor: pointer;
@@ -37,4 +56,23 @@
   position: fixed;
   top: 0;
   z-index: 999;
+}
+
+@media only screen and (max-width: 415px) {
+  .header_menu {
+    .header_menu_left {
+      font-size: 20px;
+    }
+    .menu_right_web {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 415px) {
+  .header_menu {
+    .menu_right_phone {
+      display: none;
+    }
+  }
 }
