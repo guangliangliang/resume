@@ -5,6 +5,7 @@ import MyStory from './MyStory';
 import PlacedTop from './PlacedTop';
 import ContactMe from './ContactMe';
 import About from './About';
+import { Beian } from '@/components';
 import React, { useState, useEffect, useRef } from 'react';
 import { clickLabel } from '@/utils/document';
 export default function IndexPage() {
@@ -45,6 +46,9 @@ export default function IndexPage() {
       <SampleReels />
       <MyStory />
       <ContactMe />
+      <div className={styles['beian-container']}>
+        <Beian />
+      </div>
     </>
   );
 }

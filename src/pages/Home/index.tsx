@@ -1,6 +1,5 @@
 import styles from './index.less';
 import { Button } from 'antd';
-import { history } from 'umi';
 import { clickLabel } from '@/utils/document';
 
 export default function IndexPage() {
@@ -25,11 +24,14 @@ export default function IndexPage() {
         </Button>
         <Button
           onClick={() => {
-            history.push('pdf');
+            window.open('/pdf/简历.pdf', '_blank');
           }}
         >
           PDF
         </Button>
+        <a href="/pdf/简历.pdf" target="_blank" rel="noopener noreferrer">
+          查看简历 PDF
+        </a>
       </h1>
     </div>
   );
