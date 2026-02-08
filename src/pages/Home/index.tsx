@@ -29,9 +29,6 @@ export default function IndexPage() {
         >
           PDF
         </Button>
-        <a href="/pdf/简历.pdf" target="_blank" rel="noopener noreferrer">
-          查看简历 PDF
-        </a>
       </h1>
     </div>
   );

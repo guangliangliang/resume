@@ -1,5 +1,5 @@
 import { defineConfig } from 'umi';
-const prev = process.env.NODE_ENV === 'production' ? '/resume/' : '/';
+const prev = process.env.NODE_ENV === 'production' ? '/' : '/';
 
 export default defineConfig({
   publicPath: prev,
