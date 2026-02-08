@@ -18,3 +18,10 @@
 /src/.umi-production
 /src/.umi-test
 /.env.local
+
+
+
+# dotenv environment variable files
+.env
+.env.*
+!.env.example
